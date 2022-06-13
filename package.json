@@ -1,8 +1,9 @@
 {
 	"devDependencies": {
-		"@parcel/transformer-elm": "2.3.2",
+		"@parcel/core": "^2.6.0",
+		"@parcel/transformer-elm": "^2.6.0",
 		"elm": "^0.19.1-5",
-		"parcel": "^2.3.2"
+		"parcel": "^2.6.0"
 	},
 	"scripts": {
 		"start": "pnpx parcel src/index.html",
