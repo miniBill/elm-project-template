@@ -1,10 +1,10 @@
 {
 	"devDependencies": {
-		"@parcel/core": "^2.6.2",
-		"@parcel/transformer-elm": "^2.6.2",
-		"@parcel/transformer-js": "^2.6.2",
+		"@parcel/core": "^2.7.0",
+		"@parcel/transformer-elm": "^2.7.0",
+		"@parcel/transformer-js": "^2.7.0",
 		"elm": "^0.19.1-5",
-		"parcel": "^2.6.2"
+		"parcel": "^2.7.0"
 	},
 	"scripts": {
 		"start": "pnpx parcel src/index.html",
