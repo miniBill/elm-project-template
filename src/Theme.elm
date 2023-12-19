@@ -26,6 +26,7 @@ fontSizes :
     }
 fontSizes =
     let
+        modular : Int -> Attribute msg
         modular n =
             Font.size <| round <| Element.modular 20 1.25 n
     in
@@ -115,6 +116,7 @@ grid attrs rows =
 
     else
         let
+            toColumn : Int -> Element.Column Context (List (Element msg)) msg
             toColumn i =
                 { width = shrink
                 , header = none
@@ -127,13 +129,14 @@ grid attrs rows =
                             |> el [ Element.alignBottom ]
                 }
 
-            w =
+            columnCount : Int
+            columnCount =
                 List.map List.length rows
                     |> List.maximum
                     |> Maybe.withDefault 0
         in
         Element.table (spacing :: attrs)
-            { columns = List.map toColumn <| List.range 0 (w - 1)
+            { columns = List.map toColumn <| List.range 0 (columnCount - 1)
             , data = rows
             }
 

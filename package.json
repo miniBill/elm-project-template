@@ -1,13 +1,11 @@
 {
-	"devDependencies": {
-		"@parcel/core": "^2.7.0",
-		"@parcel/transformer-elm": "^2.7.0",
-		"@parcel/transformer-js": "^2.7.0",
-		"elm": "^0.19.1-5",
-		"parcel": "^2.7.0"
-	},
-	"scripts": {
-		"start": "pnpx parcel src/index.html",
-		"build": "pnpx parcel build src/index.html"
-	}
+    "license": "MIT",
+    "devDependencies": {
+        "elm-review": "^2.10.3",
+        "elm-watch": "^1.1.2"
+    },
+    "scripts": {
+        "start": "yarn elm-watch hot",
+        "build": "yarn elm-watch make"
+    }
 }
