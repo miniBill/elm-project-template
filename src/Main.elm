@@ -1,12 +1,14 @@
 module Main exposing (Flags, Model, Msg, main)
 
 import Browser
-import Element.WithContext as Element exposing (fill, height, text, width)
-import Theme exposing (Context, Element)
+import Element.WithContext as Element exposing (fill, height, width)
+import Theme exposing (Context, Element, text)
+import Translations
 
 
 type alias Flags =
-    ()
+    { language : String
+    }
 
 
 type alias Model =
@@ -36,8 +38,14 @@ main =
 
 
 init : Flags -> ( Model, Cmd Msg )
-init _ =
-    ( { context = {}
+init flags =
+    ( { context =
+            { i18n =
+                flags.language
+                    |> Translations.languageFromString
+                    |> Maybe.withDefault Translations.En
+                    |> Translations.init
+            }
       }
     , Cmd.none
     )
@@ -53,7 +61,10 @@ update msg model =
 view : Model -> Element Msg
 view _ =
     Theme.column [ Theme.padding ]
-        [ text "Hello world"
+        [ Theme.button []
+            { onPress = Just NoOp
+            , label = text Translations.helloWorld
+            }
         ]
 
 
