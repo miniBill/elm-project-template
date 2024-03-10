@@ -14,8 +14,8 @@ type alias Model =
     }
 
 
-type alias Msg =
-    ()
+type Msg
+    = NoOp
 
 
 main : Program Flags Model Msg
@@ -46,13 +46,15 @@ init _ =
 update : Msg -> Model -> ( Model, Cmd Msg )
 update msg model =
     case msg of
-        _ ->
+        NoOp ->
             ( model, Cmd.none )
 
 
 view : Model -> Element Msg
 view _ =
-    text ""
+    Theme.column [ Theme.padding ]
+        [ text "Hello world"
+        ]
 
 
 subscriptions : Model -> Sub Msg
