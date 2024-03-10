@@ -1,9 +1,11 @@
 {
-  "packageManager": "yarn@4.0.2",
   "license": "MIT",
   "devDependencies": {
     "elm-review": "^2.10.3",
-    "elm-watch": "^1.1.2"
+    "elm-watch": "^2.0.0-beta.2"
+  },
+  "resolutions": {
+    "**/wrap-ansi": "^7.0.0"
   },
   "scripts": {
     "start": "yarn elm-watch hot",
