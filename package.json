@@ -1,13 +1,15 @@
 {
   "license": "MIT",
   "devDependencies": {
-    "elm-review": "^2.10.3",
-    "elm-watch": "^2.0.0-beta.2",
+    "elm-pages": "^3.0.12",
+    "elm-review": "^2.11.1",
+    "elm-watch": "^2.0.0-beta.3",
     "travelm-agency": "^3.4.1",
     "uglify-js": "^3.17.4"
   },
   "resolutions": {
-    "**/wrap-ansi": "^7.0.0"
+    "**/wrap-ansi": "^7.0.0",
+    "**/got": "^11.8.6"
   },
   "scripts": {
     "start": "yarn elm-watch hot",
