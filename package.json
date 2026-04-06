@@ -1,11 +1,11 @@
 {
     "license": "MIT",
     "devDependencies": {
-        "elm-pages": "^3.0.19",
-        "elm-review": "^2.11.1",
-        "elm-watch": "^2.0.0-beta.3",
-        "travelm-agency": "^3.4.1",
-        "uglify-js": "^3.17.4"
+        "elm-pages": "^3.3.4",
+        "elm-review": "^2.13.5",
+        "elm-watch": "^2.0.0-beta.12",
+        "travelm-agency": "^3.8.0",
+        "uglify-js": "^3.19.3"
     },
     "overrides": {
         "**/wrap-ansi": "^7.0.0",
